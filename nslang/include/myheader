@@ -1,0 +1,4 @@
+#include <namaskar>
+int val_of_num(int num){
+return num;
+}

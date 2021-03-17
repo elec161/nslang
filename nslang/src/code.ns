@@ -1,0 +1,23 @@
+#include <ns.h> 
+#include <conio.h> 
+using namespace std; 
+int main() 
+{ 
+    char ch; 
+    while (1) { 
+  
+        if ( kbhit() ) { 
+  
+            // Stores the pressed key in ch 
+            ch = getch(); 
+  
+            // Terminates the loop 
+            // when escape is pressed 
+            if (int(ch) == 27) 
+                break; 
+  
+            printf(ch); 
+        } 
+    } 
+    return 0; 
+}

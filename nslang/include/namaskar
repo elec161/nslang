@@ -1,0 +1,471 @@
+// program to prfloat  a ~!text
+/*
+LIB author:ANAY LOHANI
+NAMASKAR STANDARD LIBRARY IN C
+Released under MIT License
+*/
+
+#include <stdio.h>
+#include <conio.h>
+#include <dirent.h>
+#include <string.h>
+#pragma diag_suppress 177
+#include <stdlib.h>
+#include <conio.h>
+#include <time.h>
+#pragma warn -xxx
+#define nl printf("\n")
+#define _hex "%x"
+#define _string "%s"
+#define nothing void
+#define floating float
+#define sentence const char*
+#define integer int
+#define _char "%c"
+#define  _num "%d"
+#define _float  "%f"
+#define _oct "%o"
+#define space " "
+#define empty ""
+#define exit exit(0)
+#define FILE_APPEND "a"
+#define FILE_OVERWRITE "w"
+#define FILE_READ "r"
+#define FILE_READ_WRITE "w+"
+#define MAX 1000000000000
+#define author ANAY LOHANI
+#define pi 3.141592653589793
+#define e 2.7182818284590452
+
+
+
+void delay(int number_of_seconds) 
+{ 
+    // Converting time into milli_seconds 
+    int milli_seconds = 1000 * number_of_seconds; 
+  
+    // Storing start time 
+    clock_t start_time = clock(); 
+  
+    // looping till required time is not achieved 
+    while (clock() < start_time + milli_seconds) 
+        ; 
+} 
+
+float  sub(float  num1, float  num2){
+float  sub;
+sub = num1-num2;
+return  sub;
+}
+
+float  min(float  num1, float  num2){
+float  res;
+if(num1 > num2){
+res = num2;
+}
+else{
+res = num1;
+}
+return  res;
+}
+float  max(float  num1, float  num2){
+float  res1;
+if(num1 > num2){
+res1 = num1;
+}
+else{
+res1 = num2;
+}
+return res1;
+}
+float  square(float  num){
+float  s;
+s=num*num;
+return  s;
+} 
+float copy_file_contents(const char* filename, const char* filename2){
+FILE *_FILE1, *_FILE2; 
+    char c; 
+  
+    
+  
+    // Open one file for reading 
+    _FILE1 = fopen(filename, "r"); 
+ 
+  
+   
+    // Open another file for writing 
+    
+    _FILE2 = fopen(filename2, "w"); 
+    
+   
+  
+    // Read contents from file 
+    c = fgetc(_FILE1); 
+    while (c != EOF) 
+    { 
+        fputc(c, _FILE2); 
+        c = fgetc(_FILE1); 
+    } 
+  
+   
+  
+    fclose(_FILE1); 
+    fclose(_FILE2); 
+    return 0; 
+}
+
+float  cube(float  num1){
+float  s1;
+s1=num1*num1*num1;
+return  s1;
+}
+void say(const char* s){
+printf(s);
+}
+
+void print_int(float  num){
+printf("%d",num);
+}
+float  divide(float  dividend, float  divisor){
+float  wq;
+wq = dividend/divisor;
+return  wq;
+}
+float  mul(float  num1, float  num2){
+return  num1*num2;
+}
+float  square_root(float  num){
+float  werty;
+werty = sqrt(num);
+return  werty;
+}
+
+
+float  percentage(float  num){
+float  sd;
+sd =(num/1)*100;
+return  sd;
+}
+float  hours_minutes(float  hours){
+float  mins;
+mins = hours*60;
+return  mins;
+}
+float  minutes_hours(float  mins){
+float  hours;
+hours = mins/60;
+return  hours;
+}
+float  kg_hg(float  kg){
+float  hg;
+hg = kg*10;
+return  hg;
+}
+float  kg_dag(float  kg){
+float  dag;
+dag = kg*100;
+return  dag;
+}
+float  kg_g(float  kg){
+float  g;
+g = kg*1000;
+return  g;
+}
+float  kg_dg(float  kg){
+float  dg;
+dg = kg*10000;
+return  dg;
+}
+float  kg_cg(float  kg){
+float  cg;
+cg = kg*100000;
+return  cg;
+}
+float  kg_mg(float  kg){
+float  mg;
+mg = kg*1000000;
+return  mg;
+}
+float  mg_kg(float  mg){
+float  kgg;
+kgg = mg/1000000;
+return  kgg;
+}
+float  cg_kg(float  cg){
+float  cgg;
+cgg = cg/100000;
+return  cgg;
+}
+float  dg_kg(float  dg){
+float  dgg;
+dgg = dg/10000;
+return  dgg;
+}
+float  g_kg(float  g){
+float  ggg;
+ggg = g/1000;
+return  ggg;
+}
+float  dag_kg(float  dag){
+float  dagg;
+dagg = dag/100;
+return  dagg;
+}
+float  hg_kg(float  hg){
+float  hgg;
+hgg = hg/10;
+return  hgg;
+}
+float  pound_kg(float  pound){
+float  result;
+result = pound*2.205;
+return  result;
+}
+float  kg_pound(float  kg){
+float  qerr;
+qerr = kg*2.205;
+return  qerr;
+}
+float  cm_inch(float  cm){
+	
+float  inch;
+inch = cm/2.54;
+return  inch;
+}
+float  inch_cm(float  inch){
+	
+float  cm;
+inch = cm*2.54;
+return  cm;
+}
+float  km_hm(float  km){
+return km*10;
+}
+float  km_dam(float  km){
+return km*100;
+}
+float  km_m(float  km){
+return km*1000;
+}
+float  km_dm(float  km){
+return km*10000;
+}
+float  km_cm(float  km){
+return km*100000;
+}
+float  km_mm(float  km){
+return km*1000000;
+}
+float  mm_km(float  mm){
+return mm/1000000;
+}
+float  cm_km(float  cm){
+return cm/100000;
+}
+float  dm_km(float  dm){
+return dm/10000;
+}
+float  m_km(float  m){
+return m/1000;
+}
+float  dam_km(float  dam){
+return dam/100;
+}
+float  hm_km(float  hm){
+return hm/10;
+}
+float  kl_hl(float  kl){
+return kl*10;
+}
+float  kl_dal(float  kl){
+return kl*100;
+}
+float  kl_l(float  kl){
+return kl*1000;
+}
+float  kl_dl(float  kl){
+return kl*10000;
+}
+float  kl_cl(float  kl){
+return kl*100000;
+}
+float  kl_ml(float  kl){
+return kl*1000000;
+}
+float  ml_cl(float  ml){
+return ml/10;
+}
+float  ml_dl(float  ml){
+return ml/100;
+}
+float  ml_l(float  ml){
+return ml/1000;
+}
+float  ml_dal(float  ml){
+return ml/10000;
+}
+float  ml_hl(float  ml){
+return ml/100000;
+}
+float  ml_kl(float  ml){
+return ml/1000000;
+}
+
+float  rename_file(const char* on, const char* nn){
+rename(on, nn);
+}
+float  delete_file(const char* f){
+remove(f);
+}
+
+
+
+float  circum_radius(float  radius){
+float  ans = 2*pi*radius;
+return ans;
+}
+float  circum_diam(float  diam){
+float  asd = diam/2;
+float  ert = 2*pi*asd;
+return  ert;
+}
+float  cirarea_radius(float  radius){
+return pi*radius*radius;
+}
+float  create_file(const char* filename){
+FILE* __create;
+__create = fopen(filename, "w");
+fclose(__create);
+}
+float  redirect(const char* f){
+system(f);
+}
+float  red_txt(const char* txt){
+system("Color 04");
+printf(txt);
+}
+float  green_txt( const char* txt){
+system("Color 0A");
+printf(txt);
+}
+float  bodmas(){
+printf("BRACKET ORDER DIVISION MULTIPLY ADD SUSTRACT");
+}
+float  about(){
+printf("created by ANAY LOHANI in 2020 written in C AND C++");
+}
+float  count_till(float  num){
+float a=0;
+while(a < num){
+return a;
+a++;
+}
+}
+
+int len(const char* str){
+int a= strlen(str);
+return a;
+}
+float  recip(float  inp_num){
+return 1/inp_num;
+}
+float  calculate_volt(float  i, float  r){
+float  voltage = i*r;
+return voltage;
+}
+float  calculate_current(float  v, float  r){
+float  current = v/r;
+return current;
+}
+float  calculate_resis(float  v, float  i){
+float  resis = v/i;
+return resis;
+}
+
+float  truncate_file_data(const char* f){
+file_write_overwrite(f, "", "write");
+}
+
+float  play_video(const char* fname){
+system(fname);
+}
+float  show_image(const char* file){
+system(file);
+}
+void execute_cmd(const char* cmd){
+system(cmd);
+}
+void exec_shell_script(const char* bat){
+system(bat);
+}
+
+
+
+
+const char* join(const char* _s1, const char* _s2){
+char* ___res = strcat(_s1, _s2);
+return ___res;	
+}
+void print(const char* s){
+printf(s);	
+}
+
+
+
+
+int file_write_append(const char* __fname, const char* __data){
+FILE* __af;
+__af = fopen(__fname, "a");
+
+
+fputs(__data, __af);
+fclose(__af);
+}
+int file_write_overwrite(const char* _fname, const char* _data){
+FILE* __wf;
+__wf=fopen(_fname, "w");
+fputs(_data, __wf);
+fclose(__wf);
+}
+int session_set(const char* sname, const char* data){
+const char* sname1 = join("session/", sname);
+file_write_overwrite(sname1, data);	
+return 0;
+}
+int session_append(const char* sname, const char* data){
+const char* sname2 = join("session/", sname);
+file_write_append(sname2, data);
+return 0;
+}
+int read_file(const char* fp){
+FILE *fptr; 
+  
+    char filename[100], c; 
+  
+   
+    // Open file 
+    fptr = fopen(fp, "r"); 
+    if (fptr == NULL) 
+    { 
+        printf("Cannot open file \n"); 
+       
+    } 
+  
+    // Read contents from file 
+    c = fgetc(fptr); 
+    while (c != EOF) 
+    { 
+        printf ("%c", c); 
+        c = fgetc(fptr); 
+    } 
+  
+    fclose(fptr); 
+    return 0; 
+}	
+
+void get_session_data(const char* sname14){
+const char* xs = join("session/", sname14);
+read_file(xs);
+}
+
